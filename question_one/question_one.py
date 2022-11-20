@@ -30,10 +30,10 @@ while previous_step_size_a > precision or previous_step_size_b > precision or pr
     previous_step_size_c = abs(cur_c - prev_c) #Change in c
     
     iters = iters+1 #iteration count
-    #print("Iteration",iters,"\nX value is",cur_a,cur_b,cur_c) #Print iterations
     
 print("The local minimum occurs at", cur_a,cur_b,cur_c, " After: ",iters, " iterations" )
 
+#Create the plot
 plt.plot(iterations, value_of_objctive_function)
 plt.xlabel('Iterations')
 plt.ylabel('Objective Function Value')
