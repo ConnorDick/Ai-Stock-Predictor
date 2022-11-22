@@ -16,6 +16,9 @@ da = lambda a,b,c: (2*a) + 10 + (4*pow(b,2)*a) + (8*pow(c,2)*a) #d/da
 db = lambda a,b: (2*b) + 16 + (4*pow(a,2)*b) #d/db
 dc = lambda a,c: (2*c) + 14 + (8*pow(a,2)*c) #d/dc
 
+iterations = []
+value_of_objctive_function = []
+
 while previous_step_size_a > precision or previous_step_size_b > precision or previous_step_size_c > precision  and iters < max_iters:
     prev_a = cur_a #Store current a value in prev_a
     prev_b = cur_b #Store current a value in prev_a
@@ -29,7 +32,9 @@ while previous_step_size_a > precision or previous_step_size_b > precision or pr
     previous_step_size_b = abs(cur_b - prev_b) #Change in b
     previous_step_size_c = abs(cur_c - prev_c) #Change in c
     
-    iters = iters+1 #iteration count
+	iters = iters+1 #iteration count
+	iterations.append(iters)
+	value_of_objctive_function.append(f(cur_a,cur_b))
     
 print("The local minimum occurs at", cur_a,cur_b,cur_c, " After: ",iters, " iterations" )
 

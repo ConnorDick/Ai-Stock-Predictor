@@ -1,0 +1,1 @@
+By the 1000th iteration, the function nearly reached the stopping threshold. This can be sped up by increasing the learning rate. 
